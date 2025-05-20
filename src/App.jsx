@@ -18,7 +18,7 @@ import Projects from "./components/Project";
 import Contact from "./components/Contact";
 
 import "./App.css";
-
+import TuchoPhoto from "./Images/Tucho.png";
 const socialMedia = [
   {
     name: "GitHub",
@@ -38,7 +38,7 @@ const socialMedia = [
 ];
 
 const profile = {
-  photo: "/Images/Tucho.png",
+  photo: TuchoPhoto,
   name: "Tucho Biratu",
   role: "Frontend Developer",
   email: "t.biratu123@gmail.com",
