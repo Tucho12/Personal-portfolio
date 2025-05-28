@@ -17,11 +17,22 @@ import {
   FaAndroid,
   FaLaptopCode,
   FaApple,
-  FaCodeBranch
+  FaCodeBranch,
+  FaDownload,
 } from "react-icons/fa";
 import { Container, Row, Col } from "react-bootstrap";
 import { SiFlutter, SiDart, SiReact } from "react-icons/si";
 const Resume = () => {
+
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "./resume.pdf"; 
+    link.download = "My_Resume.pdf"; 
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div className="main-content mx-auto text-white resume-section">
       {/* Title */}
@@ -164,6 +175,13 @@ const Resume = () => {
           </ul>
         </Col>
       </Row>
+      <button
+        onClick={handleDownload}
+        className="btn btn-primary d-inline-flex align-items-center"
+      >
+        <FaDownload className="me-2" />
+        Download Resume
+      </button>
       {/* Footer Call to Action */}
       <div className="alert alert-primary mt-3 mb-0">
         Let’s collaborate and build impactful solutions for the web or mobile!

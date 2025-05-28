@@ -4,7 +4,7 @@ import { Container, Row, Col, Card } from "react-bootstrap";
 const projects = [
   {
     title: "E-Commerce App",
-    image: "/Images/apple.JPG",
+    image: "./Images/apple.JPG",
     link: "https://apleclone.netlify.app/",
     category: "Frontend",
     date: "20 May, 2024",
@@ -12,7 +12,7 @@ const projects = [
   },
   {
     title: "Portfolio Website",
-    image: "/Images/portfolio.JPG",
+    image: "./Images/portfolio.JPG",
     link: "https://tucho12.github.io/myPortifolio/",
     category: "Frontend",
     date: "10 Apr, 2024",
@@ -20,7 +20,7 @@ const projects = [
   },
   {
     title: "Mobile BMI App",
-    image: "/Images/input_page.png",
+    image: "./Images/input_page.png",
     link: "https://github.com/Tucho12/Mobile-App",
     category: "Mobile",
     date: "5 Nov, 2024",
@@ -28,7 +28,7 @@ const projects = [
   },
   {
     title: "Portfolio Website",
-    image: "/Images/jale.JPG",
+    image: "./Images/jale.JPG",
     link: "https://jale-graphics.netlify.app/",
     category: "Frontend",
     date: "10 Apr, 2024",
@@ -36,7 +36,7 @@ const projects = [
   },
   {
     title: "facebook Login Page",
-    image: "/Images/facebook.JPG",
+    image: "./Images/facebook.JPG",
     link: "https://fbloginform.netlify.app/",
     category: "Frontend",
     date: "15 March, 2024",
@@ -44,7 +44,7 @@ const projects = [
   },
   {
     title: "House rental Management System",
-    image: "/Images/Hrms.JPG",
+    image: "./Images/Hrms.JPG",
     link: "https://github.com/Tucho12",
     category: "Full stack",
     date: "10 March, 2025 - now",

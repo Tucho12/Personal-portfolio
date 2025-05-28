@@ -9,16 +9,14 @@ import {
   FaFacebook,
   FaBars,
   FaTimes,
-  FaSun,
-  FaMoon
 } from "react-icons/fa";
+import Home from "./components/Home";
 import About from "./components/About";
 import Resume from "./components/Resume";
 import Projects from "./components/Project";
 import Contact from "./components/Contact";
 
 import "./App.css";
-import TuchoPhoto from "./Images/Tucho.png";
 const socialMedia = [
   {
     name: "GitHub",
@@ -38,9 +36,9 @@ const socialMedia = [
 ];
 
 const profile = {
-  photo: TuchoPhoto,
+  photo: "Images/Tucho.png",
   name: "Tucho Biratu",
-  role: "Frontend Developer",
+  role: "Full Stack Developer",
   email: "t.biratu123@gmail.com",
   birth: "March 11, 2000",
   location: "Addis Ababa, Ethiopia",
@@ -55,10 +53,9 @@ const profileIcons = {
 };
 
 const App = () => {
-  const [activeSection, setActiveSection] = useState("about");
+  const [activeSection, setActiveSection] = useState("home");
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [darkMode, setDarkMode] = useState(true);
-
 
   useEffect(() => {
     if (sidebarOpen) {
@@ -75,6 +72,8 @@ const App = () => {
 
   const renderContent = () => {
     switch (activeSection) {
+      case "home":
+        return <Home />;
       case "about":
         return <About />;
       case "resume":
@@ -84,15 +83,13 @@ const App = () => {
       case "contact":
         return <Contact />;
       default:
-        return <About />;
+        return <Home />;
     }
   };
 
   return (
     <div className="container">
       <div className="content">
-
-        {/* Hamburger button only visible on small screen */}
         <button
           className="hamburger-btn"
           aria-label={sidebarOpen ? "Close sidebar" : "Open sidebar"}
@@ -150,15 +147,14 @@ const App = () => {
           </div>
         </aside>
 
-        <main className="main-content">
-          {/* Navigation: keep it as is for desktop, will move to bottom on small screens */}
+        <main className="main-contents">
           <nav className="navbar" aria-label="Primary navigation">
-            {["about", "resume", "projects", "contact"].map((section) => (
+            {["home","about", "resume", "projects", "contact"].map((section) => (
               <button
                 key={section}
                 onClick={() => {
                   setActiveSection(section);
-                  setSidebarOpen(false); 
+                  setSidebarOpen(false);
                 }}
                 aria-current={activeSection === section ? "page" : undefined}
                 className={activeSection === section ? "active" : ""}
