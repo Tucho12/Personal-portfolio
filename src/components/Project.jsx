@@ -45,7 +45,7 @@ const projects = [
   {
     title: "House rental Management System",
     image: "./Images/Hrms.JPG",
-    link: "https://github.com/Tucho12",
+    link: "https://frontend-orcin-xi-42.vercel.app/",
     category: "Full stack",
     date: "10 March, 2025 - now",
     description:
